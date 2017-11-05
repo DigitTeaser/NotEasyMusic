@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android.noteasymusic.PlayingActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zero_dp"
+        android:layout_weight="4"
+        android:contentDescription="@string/song_cover"
+        android:scaleType="centerCrop"
+        android:src="@drawable/coldplay_cover" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zero_dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/now_playing_info"
+        android:textSize="@dimen/now_playing_info_size" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zero_dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <ImageView
+            style="@style/MusicControlImage"
+            android:contentDescription="@string/skip_previous_icon"
+            android:src="@drawable/skip_previous" />
+
+        <ImageView
+            android:id="@id/play_pause_image"
+            style="@style/MusicControlImage"
+            android:contentDescription="@string/play_pause_button"
+            android:src="@drawable/play" />
+
+        <ImageView
+            style="@style/MusicControlImage"
+            android:contentDescription="@string/skip_next_icon"
+            android:src="@drawable/skip_next" />
+    </LinearLayout>
+</LinearLayout>

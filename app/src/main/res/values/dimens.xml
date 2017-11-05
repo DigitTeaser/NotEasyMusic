@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="zero_dp">0dp</dimen>
+    <dimen name="one_dp">1dp</dimen>
+    <dimen name="viewgroups_padding">16dp</dimen>
+    <dimen name="bottom_bar_height">56dp</dimen>
+    <dimen name="bottom_bar_padding">8dp</dimen>
+    <dimen name="local_list_padding">16dp</dimen>
+    <dimen name="online_song_padding">8dp</dimen>
+
+    <dimen name="playing_info_bottom_size">15sp</dimen>
+    <dimen name="online_song_info_size">15sp</dimen>
+    <dimen name="now_playing_info_size">24sp</dimen>
+    <dimen name="music_selection">45sp</dimen>
+
+</resources>

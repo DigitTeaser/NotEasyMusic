@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">NotEasy Music</string>
+
+    <!-- Labels for Activity. -->
+    <string name="local_label">Local Music</string>
+    <string name="online_label">Online Music</string>
+    <string name="playing_label">Now Playing</string>
+
+    <!-- Description texts for the image. -->
+    <string name="drive_icon">This is the drive icon display for local music.</string>
+    <string name="globe_icon">This is the globe icon display for online music.</string>
+    <string name="song_cover">This is the song cover display for now playing music.</string>
+    <string name="skip_previous_icon">This is the skip previous icon display for music control.</string>
+    <string name="skip_next_icon">This is the skip next icon display for music control.</string>
+    <string name="play_pause_button">This is the play and pause button display for music control.</string>
+
+    <!-- Text in MainActivity. -->
+    <string name="local_music">Local</string>
+    <string name="online_music">Online</string>
+
+    <!-- Information about now playing songs. -->
+    <string name="now_playing_info">Don\'t panic - Coldplay</string>
+    <string name="song_price">$1.50</string>
+</resources>
