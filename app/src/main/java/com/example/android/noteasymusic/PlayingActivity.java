@@ -8,7 +8,7 @@ import android.widget.ImageView;
 public class PlayingActivity extends AppCompatActivity {
 
     // Set the play and pause ImageView status to true.
-    boolean isPlaying = true;
+    private boolean isPlaying = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

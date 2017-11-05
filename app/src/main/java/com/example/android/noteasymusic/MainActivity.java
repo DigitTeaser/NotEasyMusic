@@ -11,7 +11,7 @@ import android.widget.RelativeLayout;
 public class MainActivity extends AppCompatActivity {
 
     // Set the play and pause ImageView status to true.
-    boolean isPlaying = true;
+    private boolean isPlaying = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,29 +34,19 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // If user click the bottom bar, intent to the PlayingActivity
-        LinearLayout linearLayout = findViewById(R.id.now_playing);
-        linearLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(view.getContext(), PlayingActivity.class));
-            }
-        });
-
+        setListenerOpenActivity(R.id.now_playing, PlayingActivity.class);
         // If user click the Local View, intent to the LocalActivity
-        RelativeLayout localRelativeLayout = findViewById(R.id.local_music);
-        localRelativeLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(view.getContext(), LocalActivity.class));
-            }
-        });
-
+        setListenerOpenActivity(R.id.local_music, LocalActivity.class);
         // If user click the Online View, intent to the OnlineActivity
-        RelativeLayout onlineRelativeLayout = findViewById(R.id.online_music);
-        onlineRelativeLayout.setOnClickListener(new View.OnClickListener() {
+        setListenerOpenActivity(R.id.online_music, OnlineActivity.class);
+    }
+
+    // This function handles the click event and open Activity
+    private void setListenerOpenActivity(int viewId, final Class activityToOpen) {
+        findViewById(viewId).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(view.getContext(), OnlineActivity.class));
+                startActivity(new Intent(view.getContext(), activityToOpen));
             }
         });
     }
