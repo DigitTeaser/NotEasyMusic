@@ -1,6 +1,8 @@
 # NotEasyMusic
 An Musical Structure.
 
+11/10/17：ListView applied in Local and Online Activity.
+
 11/05/17: Initiate Commit.
 1. The bottom bar in the App exists in every Activity except Playing Activity, it leads to duplicated codes in Java files. After searching on Google, I learnt that `Fragments` can deal with this situation by combining serveral layouts into one Activity. The course later will cover `Fragments`, so I leave this problem behind for now.
 2. Some improvements can be done, such as ListView/RecycleView applied in Local Activity, using Android Pay API as Payment Activity, however due to time limitation, I have to put all this aside and maybe do it later. 
