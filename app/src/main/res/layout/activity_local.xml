@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.android.noteasymusic.LocalActivity">
 
-    <TextView
+    <ListView
+        android:id="@+id/local_list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/local_list_padding"
-        android:text="@string/now_playing_info"
-        android:textSize="@dimen/now_playing_info_size" />
+        android:layout_height="@dimen/zero_dp"
+        android:layout_weight="1"
+        android:orientation="vertical" />
 
     <LinearLayout
         android:id="@id/now_playing"
         android:layout_width="match_parent"
         android:layout_height="@dimen/bottom_bar_height"
-        android:layout_alignParentBottom="true"
         android:background="@android:color/white"
         android:padding="@dimen/bottom_bar_padding">
 
@@ -60,4 +60,4 @@
             android:contentDescription="@string/skip_next_icon"
             android:src="@drawable/skip_next" />
     </LinearLayout>
-</RelativeLayout>
+</LinearLayout>

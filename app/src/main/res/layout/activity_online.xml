@@ -1,56 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.android.noteasymusic.OnlineActivity">
 
-    <ScrollView
+    <ListView
+        android:id="@+id/online_list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <RelativeLayout
-            android:id="@+id/online_purchase"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/viewgroups_padding">
-
-            <ImageView
-                android:id="@+id/song_cover"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:contentDescription="@string/song_cover"
-                android:scaleType="centerCrop"
-                android:src="@drawable/coldplay_cover" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/song_cover"
-                android:gravity="center_vertical"
-                android:padding="@dimen/online_song_padding"
-                android:text="@string/now_playing_info"
-                android:textSize="@dimen/online_song_info_size" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_below="@id/song_cover"
-                android:gravity="center"
-                android:padding="@dimen/online_song_padding"
-                android:text="@string/song_price"
-                android:textSize="@dimen/online_song_info_size" />
-        </RelativeLayout>
-    </ScrollView>
+        android:layout_height="@dimen/zero_dp"
+        android:layout_weight="1"
+        android:divider="@null"
+        android:orientation="vertical" />
 
     <LinearLayout
         android:id="@id/now_playing"
         android:layout_width="match_parent"
         android:layout_height="@dimen/bottom_bar_height"
-        android:layout_alignParentBottom="true"
         android:background="@android:color/white"
         android:padding="@dimen/bottom_bar_padding">
 
@@ -94,4 +61,4 @@
             android:contentDescription="@string/skip_next_icon"
             android:src="@drawable/skip_next" />
     </LinearLayout>
-</RelativeLayout>
+</LinearLayout>
