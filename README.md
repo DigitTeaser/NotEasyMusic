@@ -1,6 +1,8 @@
 # NotEasyMusic
 An Musical Structure.
 
+12/29/17: Use MeidaPlayer class to play a song in raw repertory and a touchable SeekBar to display/adjust the proress of the song. However, no lifecycle control in PLayingActivity was done currently and no further control of media playback was indroduced in the app. Hopefully, they can be implemented soon.
+
 11/10/17：ListView applied in Local and Online Activity.
 
 11/05/17: Initiate Commit.

@@ -21,4 +21,5 @@
     <!-- Information about now playing songs. -->
     <string name="now_playing_info">Don\'t panic - Coldplay</string>
     <string name="song_price">$1.50</string>
+    <string name="song_time">00:00</string>
 </resources>

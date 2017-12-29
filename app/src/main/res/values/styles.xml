@@ -32,6 +32,16 @@
         <item name="android:textSize">@dimen/music_selection</item>
     </style>
 
+    <!-- Style for song time text -->
+    <style name="SongTimeText">
+        <item name="android:layout_width">@dimen/zero_dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/music_time_size</item>
+        <item name="android:text">@string/song_time</item>
+    </style>
+
     <!-- Style for music control Image -->
     <style name="MusicControlImage">
         <item name="android:layout_width">@dimen/zero_dp</item>
