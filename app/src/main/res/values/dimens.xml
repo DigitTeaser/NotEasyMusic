@@ -7,8 +7,9 @@
     <dimen name="bottom_bar_padding">8dp</dimen>
     <dimen name="local_list_padding">16dp</dimen>
     <dimen name="online_song_padding">8dp</dimen>
-    <dimen name="playing_button_padding">16dp</dimen>
+    <dimen name="playing_button_padding">8dp</dimen>
 
+    <dimen name="music_time_size">14sp</dimen>
     <dimen name="playing_info_bottom_size">15sp</dimen>
     <dimen name="online_song_info_size">15sp</dimen>
     <dimen name="now_playing_info_size">24sp</dimen>
