@@ -8,7 +8,7 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="@dimen/zero_dp"
+        android:layout_height="0dp"
         android:layout_weight="6"
         android:contentDescription="@string/song_cover"
         android:scaleType="centerCrop"
@@ -16,7 +16,7 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="@dimen/zero_dp"
+        android:layout_height="0dp"
         android:layout_weight="1"
         android:gravity="center"
         android:text="@string/now_playing_info"
@@ -24,7 +24,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/zero_dp"
+        android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal">
 
@@ -34,7 +34,7 @@
 
         <SeekBar
             android:id="@+id/seekBar"
-            android:layout_width="@dimen/zero_dp"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="4" />
 
@@ -45,7 +45,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/zero_dp"
+        android:layout_height="0dp"
         android:layout_weight="1"
         android:padding="@dimen/playing_button_padding">
 

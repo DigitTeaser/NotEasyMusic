@@ -1,43 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.android.noteasymusic.MainActivity">
 
-    <RelativeLayout
-        android:id="@+id/local_music"
-        style="@style/MainActivityRelativeLayout">
-
-        <ImageView
-            style="@style/MainActivityImage"
-            android:contentDescription="@string/drive_icon"
-            android:src="@drawable/device_drive_icon" />
-
-        <TextView
-            style="@style/MainActivityText"
-            android:text="@string/local_music" />
-    </RelativeLayout>
-
-    <View
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabs"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/one_dp"
-        android:background="@android:color/darker_gray" />
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:tabIndicatorHeight="@dimen/tab_indicator_height"
+        app:tabSelectedTextColor="@android:color/white"
+        app:tabTextColor="@android:color/secondary_text_dark" />
 
-    <RelativeLayout
-        android:id="@+id/online_music"
-        style="@style/MainActivityRelativeLayout">
-
-        <ImageView
-            style="@style/MainActivityImage"
-            android:contentDescription="@string/globe_icon"
-            android:src="@drawable/globe_icon" />
-
-        <TextView
-            style="@style/MainActivityText"
-            android:text="@string/online_music" />
-    </RelativeLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
     <LinearLayout
         android:id="@+id/now_playing"
@@ -47,7 +30,7 @@
         android:padding="@dimen/bottom_bar_padding">
 
         <ImageView
-            android:layout_width="@dimen/zero_dp"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:contentDescription="@string/song_cover"
@@ -55,7 +38,7 @@
             android:src="@drawable/coldplay_cover" />
 
         <TextView
-            android:layout_width="@dimen/zero_dp"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="5"
             android:gravity="center_vertical"

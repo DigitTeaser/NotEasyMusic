@@ -22,14 +22,6 @@
             android:name=".PlayingActivity"
             android:label="@string/playing_label"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".LocalActivity"
-            android:label="@string/local_label"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".OnlineActivity"
-            android:label="@string/online_label"
-            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

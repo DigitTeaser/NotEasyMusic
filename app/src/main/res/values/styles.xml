@@ -6,35 +6,21 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <!-- Apply the app bar style below -->
+        <item name="actionBarStyle">@style/myActionBarStyle</item>
+        <!-- Remove shadow below action bar for pre Android 5.0 -->
+        <item name="android:windowContentOverlay">@null</item>
     </style>
 
-    <!-- Style for MainActivity RelativeLayout -->
-    <style name="MainActivityRelativeLayout">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">@dimen/zero_dp</item>
-        <item name="android:layout_weight">1</item>
-        <item name="android:padding">@dimen/viewgroups_padding</item>
-    </style>
-
-    <!-- Style for MainActivity ImageView -->
-    <style name="MainActivityImage">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">match_parent</item>
-        <item name="android:alpha">.50</item>
-        <item name="android:scaleType">fitEnd</item>
-    </style>
-
-    <!-- Style for MainActivity Text -->
-    <style name="MainActivityText">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_alignParentBottom">true</item>
-        <item name="android:textSize">@dimen/music_selection</item>
+    <!-- Action bar style -->
+    <style name="myActionBarStyle" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <!-- Remove the shadow below the app bar -->
+        <item name="elevation">0dp</item>
     </style>
 
     <!-- Style for song time text -->
     <style name="SongTimeText">
-        <item name="android:layout_width">@dimen/zero_dp</item>
+        <item name="android:layout_width">0dp</item>
         <item name="android:layout_weight">1</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:gravity">center</item>
@@ -44,9 +30,8 @@
 
     <!-- Style for music control Image -->
     <style name="MusicControlImage">
-        <item name="android:layout_width">@dimen/zero_dp</item>
+        <item name="android:layout_width">0dp</item>
         <item name="android:layout_weight">1</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
-
 </resources>
