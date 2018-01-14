@@ -60,27 +60,9 @@ public class PlayingActivity extends AppCompatActivity {
     private AudioManager mAudioManager;
 
     /**
-     * This listener gets triggered when the {@link MediaPlayer} has completed
-     * playing the audio file.
-     */
-    private MediaPlayer.OnCompletionListener mCompletionListener = new MediaPlayer.OnCompletionListener() {
-        @Override
-        public void onCompletion(MediaPlayer mediaPlayer) {
-            // Changing button image to play button.
-            button_play.setImageResource(R.drawable.btn_play);
-            // Stop updating the song time.
-            timeUpdateHandler.removeCallbacks(UpdateSongTime);
-            // Set SeekBar back to start.
-            seekBar.setProgress(0);
-        }
-    };
-
-    /**
      * Instant of the BecomingNoisyReceiver.
      */
-    private BecomingNoisyReceiver myNoisyAudioStreamReceiver = new BecomingNoisyReceiver();
-
-    IntentFilter intentFilter = new IntentFilter(AudioManager.ACTION_AUDIO_BECOMING_NOISY);
+    private BecomingNoisyReceiver myNoisyAudioStreamReceiver;
 
     /**
      * Create a BroadcastReceiver that listens for the intent whenever it's playing audio.
@@ -152,6 +134,22 @@ public class PlayingActivity extends AppCompatActivity {
             };
 
     /**
+     * This listener gets triggered when the {@link MediaPlayer} has completed
+     * playing the audio file.
+     */
+    private MediaPlayer.OnCompletionListener mCompletionListener = new MediaPlayer.OnCompletionListener() {
+        @Override
+        public void onCompletion(MediaPlayer mediaPlayer) {
+            // Changing button image to play button.
+            button_play.setImageResource(R.drawable.btn_play);
+            // Stop updating the song time.
+            timeUpdateHandler.removeCallbacks(UpdateSongTime);
+            // Set SeekBar back to start.
+            seekBar.setProgress(0);
+        }
+    };
+    
+    /**
      * This listener gets triggered whenever the audio focus changes
      * (i.e., we gain or lose audio focus because of another app or device).
      */
@@ -195,7 +193,7 @@ public class PlayingActivity extends AppCompatActivity {
      * This listener gets triggered whenever the play/pause button was pressed.
      * This is the main controller of the audio playback.
      */
-    View.OnClickListener buttonPlayOnClickListener= new View.OnClickListener() {
+    View.OnClickListener buttonPlayOnClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
             if (!hasAudioFocus) {
@@ -237,8 +235,6 @@ public class PlayingActivity extends AppCompatActivity {
                     mMediaPlayer.start();
                     // Setup a listener on the media player.
                     mMediaPlayer.setOnCompletionListener(mCompletionListener);
-                    // Register the BecomingNoisyReceiver.
-                    registerReceiver(myNoisyAudioStreamReceiver, intentFilter);
                     // Changing button image to pause button
                     button_play.setImageResource(R.drawable.btn_pause);
                     // Set the indicator to true since we get Audio Focus.
@@ -274,6 +270,12 @@ public class PlayingActivity extends AppCompatActivity {
         // Even if there’s no music for the current location.
         setVolumeControlStream(AudioManager.STREAM_MUSIC);
 
+        myNoisyAudioStreamReceiver = new BecomingNoisyReceiver();
+        // Setup IntentFilter for the BecomingNoisyReceiver.
+        IntentFilter intentFilter = new IntentFilter(AudioManager.ACTION_AUDIO_BECOMING_NOISY);
+        // Register the BecomingNoisyReceiver.
+        registerReceiver(myNoisyAudioStreamReceiver, intentFilter);
+
         // The SeekBar that display the progress of the playback.
         seekBar = findViewById(R.id.seekBar);
         // When the user drag and drop SeekBar, update the song position.
@@ -289,6 +291,9 @@ public class PlayingActivity extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         // Unregister the BecomingNoisyReceiver.
-        unregisterReceiver(myNoisyAudioStreamReceiver);
+        if (myNoisyAudioStreamReceiver != null) {
+            unregisterReceiver(myNoisyAudioStreamReceiver);
+            myNoisyAudioStreamReceiver = null;
+        }
     }
 }
