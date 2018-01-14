@@ -2,16 +2,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:paddingBottom="@dimen/local_list_vertical_padding"
-    android:paddingLeft="@dimen/local_list_horizontal_padding"
-    android:paddingRight="@dimen/local_list_horizontal_padding"
-    android:paddingTop="@dimen/local_list_vertical_padding">
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/song"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center_vertical"
+        android:background="?android:attr/selectableItemBackground"
+        android:paddingBottom="@dimen/local_list_vertical_padding"
+        android:paddingLeft="@dimen/local_list_horizontal_padding"
+        android:paddingRight="@dimen/local_list_horizontal_padding"
+        android:paddingTop="@dimen/local_list_vertical_padding"
         android:textSize="@dimen/local_text_size" />
 </LinearLayout>

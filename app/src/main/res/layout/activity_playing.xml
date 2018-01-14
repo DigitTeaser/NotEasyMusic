@@ -54,11 +54,13 @@
             android:contentDescription="@string/skip_previous_icon"
             android:src="@drawable/skip_previous" />
 
-        <ImageView
-            android:id="@id/play_pause_image"
-            style="@style/MusicControlImage"
+        <ImageButton
             android:contentDescription="@string/play_pause_button"
-            android:src="@drawable/play" />
+            android:id="@+id/btn_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:src="@drawable/btn_play" />
 
         <ImageView
             style="@style/MusicControlImage"

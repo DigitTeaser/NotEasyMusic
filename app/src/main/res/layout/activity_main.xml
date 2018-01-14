@@ -60,7 +60,7 @@
             android:layout_marginLeft="@dimen/bottom_bar_padding"
             android:layout_marginRight="@dimen/bottom_bar_padding"
             android:contentDescription="@string/play_pause_button"
-            android:src="@drawable/play" />
+            android:src="@drawable/play_normal" />
 
         <ImageView
             style="@style/MusicControlImage"

@@ -32,8 +32,8 @@ public class OnlineFragment extends Fragment {
 
         // Add Contents to the array list
         final List<OnlineMusic> onlineList = new ArrayList<>();
-        onlineList.add(new OnlineMusic(getString(R.string.now_playing_info), getString(R.string.song_price), R.drawable.coldplay_cover));
-        onlineList.add(new OnlineMusic(getString(R.string.now_playing_info), getString(R.string.song_price), R.drawable.coldplay_cover));
+        onlineList.add(new OnlineMusic(getString(R.string.now_playing_info),
+                getString(R.string.song_price), R.drawable.coldplay_cover));
 
         // Create an {@link PlaceAdapter}, whose data source is a list of {@link Place}s. The
         // adapter knows how to create list items for each item in the list.
